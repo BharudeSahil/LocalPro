@@ -1,0 +1,163 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Service Providers - LocalPro</title>
+    <link rel="stylesheet" href="providers.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">LocalPro</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/services.html">Services</a>
+            <a href="/providers.html" class="active">Providers</a>
+            <button id="loginBtn" class="btn-primary">Login</button>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <h1>Service Providers</h1>
+        <div class="filter-container">
+            <select id="serviceFilter">
+                <option value="">All Services</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="cleaning">Cleaning</option>
+                <option value="electrical">Electrical</option>
+                <option value="carpentry">Carpentry</option>
+            </select>
+            <select id="ratingFilter">
+                <option value="">All Ratings</option>
+                <option value="4">4+ Stars</option>
+                <option value="3">3+ Stars</option>
+            </select>
+        </div>
+        <div class="provider-grid" id="providersList">
+            Providers will be loaded dynamically
+        </div>
+    </div>
+
+    <script type="module" src="/js/providers.js"></script>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Providers - Local Service Finder</title>
+  <link rel="stylesheet" href="providers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">LocalPro</div>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/providers.html" class="active">Providers</a>
+      <button id="loginBtn" class="btn-primary">Login</button>
+    </div>
+  </nav>
+
+  <!-- Providers Page Content -->
+  <main class="providers-page">
+    <!-- Filters Section (Left Side) -->
+    <div class="filters-section">
+      <h2>Filters</h2>
+      <div class="filter-group">
+        <label for="cityFilter">City</label>
+        <input type="text" id="cityFilter" placeholder="Enter city...">
+      </div>
+      <div class="filter-group">
+        <label for="ratingFilter">Rating</label>
+        <select id="ratingFilter">
+          <option value="">All Ratings</option>
+          <option value="5">⭐⭐⭐⭐⭐ (5)</option>
+          <option value="4">⭐⭐⭐⭐ (4+)</option>
+          <option value="3">⭐⭐⭐ (3+)</option>
+          <option value="2">⭐⭐ (2+)</option>
+          <option value="1">⭐ (1+)</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="serviceFilter">Service</label>
+        <select id="serviceFilter">
+          <option value="">All Services</option>
+          <option value="Plumbing">Plumbing</option>
+          <option value="Electrical">Electrical</option>
+          <option value="Cleaning">Cleaning</option>
+          <option value="Carpentry">Carpentry</option>
+          <option value="Auto Repair">Auto Repair</option>
+          <option value="Gardening">Gardening</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="priceFilter">Price Range</label>
+        <select id="priceFilter">
+          <option value="">All Prices</option>
+          <option value="0-50">₹0 - ₹50</option>
+          <option value="50-100">₹50 - ₹100</option>
+          <option value="100-200">₹100 - ₹500</option>
+          <option value="200+">₹500+</option>
+        </select>
+      </div>
+      <button id="applyFilters" class="btn-primary">Apply Filters</button>
+    </div>
+
+    <!-- Providers List (Right Side) -->
+    <div class="providers-list">
+      <h2>Service Providers</h2>
+      <!-- Provider Cards -->
+      <div class="provider-card">
+        <div class="provider-info">
+          <h3>John's Plumbing</h3>
+          <p><strong>Service:</strong> Plumbing</p>
+          <p><strong>City:</strong> Vadodara</p>
+          <p><strong>Rating:</strong> ⭐⭐⭐⭐ (4.5/5)</p>
+          <p><strong>Price:</strong> ₹100 - ₹500</p>
+          <p><strong>Work Profile:</strong> Experienced plumber with 10+ years of service. Specializes in pipe repairs and installations.</p>
+        </div>
+        <a href="booking.html" class="btn-book">
+            <button class="btn-book">Book Now</button>
+        </a>
+      </div>
+
+      <div class="provider-card">
+        <div class="provider-info">
+          <h3>Sparky Electric</h3>
+          <p><strong>Service:</strong> Electrical</p>
+          <p><strong>City:</strong> Ahemdabad</p>
+          <p><strong>Rating:</strong> ⭐⭐⭐⭐⭐ (5/5)</p>
+          <p><strong>Price:</strong> ₹50 - ₹1000</p>
+          <p><strong>Work Profile:</strong> Licensed electrician offering wiring, repairs, and installations.</p>
+        </div>
+        <a href="booking.html" class="btn-book">
+            <button class="btn-book">Book Now</button>
+        </a>
+      </div>
+
+      <div class="provider-card">
+        <div class="provider-info">
+          <h3>Clean & Shine</h3>
+          <p><strong>Service:</strong> Cleaning</p>
+          <p><strong>City:</strong> Surat</p>
+          <p><strong>Rating:</strong> ⭐⭐⭐⭐ (4/5)</p>
+          <p><strong>Price:</strong> ₹100 - ₹2000</p>
+          <p><strong>Work Profile:</strong> Professional cleaning services for homes and offices.</p>
+        </div>
+        <a href="booking.html" class="btn-book">
+            <button class="btn-book">Book Now</button>
+        </a>
+        <!-- <button class="btn-book">Book Now</button> -->
+      </div>
+    </div>
+  </main>
+  <script type="module" src="/js/providers.js"></script>
+</body>
+</html>

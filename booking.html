@@ -1,0 +1,129 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Service - LocalPro</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-brand">LocalPro</div>
+        <div class="nav-links">
+            <a href="/">Home</a>
+            <a href="/services.html">Services</a>
+            <a href="/providers.html">Providers</a>
+            <button id="loginBtn" class="btn-primary">Login</button>
+        </div>
+    </nav>
+
+    <div class="page-container">
+        <div class="booking-container">
+            <div class="provider-details">
+                Provider details will be loaded dynamically
+            </div>
+            <div class="booking-form">
+                <h2>Book Appointment</h2>
+                <form id="bookingForm">
+                    <div class="form-group">
+                        <label for="service">Service</label>
+                        <select id="service" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="date">Date</label>
+                        <input type="date" id="date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="time">Time</label>
+                        <select id="time" required></select>
+                    </div>
+                    <div class="form-group">
+                        <label for="notes">Additional Notes</label>
+                        <textarea id="notes"></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Book Now</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script type="module" src="/js/booking.js"></script>
+</body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Service - Local Service Finder</title>
+  <link rel="stylesheet" href="booking.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="nav-brand">LocalPro</div>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/services.html">Services</a>
+      <a href="/providers.html">Providers</a>
+      <button id="loginBtn" class="btn-primary">Login</button>
+    </div>
+  </nav>
+
+  <!-- Booking Page Content -->
+  <main class="booking-container">
+    <!-- Provider Details Section -->
+    <div class="provider-details">
+      <h2>Book Your Service</h2>
+      <div class="provider-info">
+        <h3>John's Plumbing</h3>
+        <p><strong>Service:</strong> Plumbing</p>
+        <p><strong>Rating:</strong> ⭐⭐⭐⭐ (4.5/5)</p>
+        <p><strong>City:</strong> New York</p>
+        <p><strong>Price:</strong> $100 - $200</p>
+        <p><strong>Work Profile:</strong> Experienced plumber with 10+ years of service. Specializes in pipe repairs and installations.</p>
+      </div>
+    </div>
+
+    <!-- Booking Form Section -->
+    <div class="booking-form">
+      <h3>Booking Details</h3>
+      <form id="bookingForm">
+        <div class="form-group">
+          <label for="name">Your Name</label>
+          <input type="text" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Your Email</label>
+          <input type="email" id="email" placeholder="Enter your email" required>
+        </div>
+        <div class="form-group">
+          <label for="phone">Your Phone</label>
+          <input type="tel" id="phone" placeholder="Enter your phone number" required>
+        </div>
+        <div class="form-group">
+          <label for="date">Select Date</label>
+          <input type="date" id="date" required>
+        </div>
+        <div class="form-group">
+          <label for="time">Select Time</label>
+          <input type="time" id="time" required>
+        </div>
+        <div class="form-group">
+          <label for="address">Service Address</label>
+          <textarea id="address" placeholder="Enter your address" required></textarea>
+        </div>
+        <div class="form-group">
+          <label for="notes">Additional Notes</label>
+          <textarea id="notes" placeholder="Any special instructions?"></textarea>
+        </div>
+        <button type="submit" class="btn-primary">Confirm Booking</button>
+      </form>
+    </div>
+  </main>
+  <script type="module" src="/js/booking.js"></script>
+</body>
+</html>

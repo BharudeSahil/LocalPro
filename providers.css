@@ -1,0 +1,185 @@
+/* General Styles */
+:root {
+  --primary-color: #4a90e2;
+  --secondary-color: #2c3e50;
+  --accent-color: #e67e22;
+  --background-color: #f5f6fa;
+  --text-color: #2c3e50;
+  --card-background: #ffffff;
+  --shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --border-radius: 8px;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  padding-top: 80px; /* To account for fixed navbar */
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 5%;
+  background-color: white;
+  box-shadow: var(--shadow);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--primary-color);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--text-color);
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: var(--primary-color);
+}
+
+.nav-links .active {
+  color: var(--primary-color);
+  font-weight: bold;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color);
+}
+
+/* Providers Page Layout */
+.providers-page {
+  display: flex;
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Filters Section (Left Side) */
+.filters-section {
+  width: 25%;
+  padding: 20px;
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+
+.filters-section h2 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.filter-group {
+  margin-bottom: 20px;
+}
+
+.filter-group label {
+  display: block;
+  font-size: 1rem;
+  color: var(--text-color);
+  margin-bottom: 5px;
+}
+
+.filter-group input,
+.filter-group select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius);
+  font-size: 1rem;
+}
+
+/* Providers List (Right Side) */
+.providers-list {
+  width: 75%;
+}
+
+.providers-list h2 {
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  margin-bottom: 20px;
+}
+
+.provider-card {
+  background-color: var(--card-background);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.provider-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.provider-info h3 {
+  font-size: 1.25rem;
+  color: var(--secondary-color);
+  margin: 0 0 10px;
+}
+
+.provider-info p {
+  font-size: 1rem;
+  color: var(--text-color);
+  margin: 5px 0;
+}
+
+.btn-book {
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius);
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.btn-book:hover {
+  background-color: var(--accent-color);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .providers-page {
+    flex-direction: column;
+  }
+
+  .filters-section,
+  .providers-list {
+    width: 100%;
+  }
+}
